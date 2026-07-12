@@ -1,1 +1,85 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Politique de confidentialité – PicEvent</title>
+<style>
+  :root { --bg:#0C0A09; --card:#171412; --text:#E7E2DC; --muted:#A39C93; --gold:#D4A853; --border:#2A2522; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--text);
+         font:16px/1.65 -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif; }
+  .wrap { max-width:760px; margin:0 auto; padding:40px 22px 80px; }
+  h1 { color:var(--gold); font-size:1.9rem; margin:0 0 4px; }
+  .sub { color:var(--muted); font-size:.9rem; margin-bottom:28px; }
+  h2 { color:var(--gold); font-size:1.15rem; margin:34px 0 10px; }
+  p, li { color:var(--text); }
+  ul { padding-left:22px; }
+  a { color:var(--gold); }
+  .lang { display:inline-block; margin-bottom:22px; font-size:.85rem;
+          border:1px solid var(--border); border-radius:20px; padding:6px 14px;
+          text-decoration:none; }
+  .box { background:var(--card); border:1px solid var(--border); border-radius:12px;
+         padding:16px 18px; margin:18px 0; font-size:.92rem; color:var(--muted); }
+</style>
+</head>
+<body>
+<div class="wrap">
+<a class="lang" href="privacy-en.html">🇬🇧 English version</a>
+<h1>Politique de confidentialité</h1>
+<div class="sub">Dernière mise à jour : 12 juillet 2026</div>
 
+<h2>1. Qui sommes-nous ?</h2>
+<p>PicEvent est une application mobile de partage de photos et vidéos entre participants d'un même événement (mariage, anniversaire, voyage, événement d'entreprise…). L'éditeur de PicEvent est le responsable du traitement de vos données.</p>
+<div class="box">Contact : <a href="mailto:Piceventcontacte@gmail.com">Piceventcontacte@gmail.com</a></div>
+
+<h2>2. Quelles données collectons-nous ?</h2>
+<ul>
+<li><strong>Profil</strong> : le prénom (ou pseudonyme) que vous saisissez, un nom d'utilisateur généré automatiquement, une couleur ou photo d'avatar si vous en choisissez une, et la date de création du compte.</li>
+<li><strong>Identifiant technique</strong> : un identifiant anonyme fourni par Firebase Authentication. Aucune adresse e-mail, aucun numéro de téléphone et aucun mot de passe ne sont requis pour utiliser l'application.</li>
+<li><strong>Contenus</strong> : les photos, vidéos, commentaires et « j'aime » que vous publiez dans les albums, ainsi que la liste des albums que vous créez ou rejoignez.</li>
+<li><strong>Préférences</strong> : la langue choisie (français/anglais), stockée uniquement sur votre appareil.</li>
+<li><strong>Achats</strong> : les transactions éventuelles (création d'album) sont traitées par Google Play ou l'App Store. Nous ne recevons ni ne stockons vos données bancaires.</li>
+</ul>
+
+<h2>3. Pourquoi ces données ?</h2>
+<p>Uniquement pour faire fonctionner le service : créer et rejoindre des albums, afficher vos contenus aux autres participants de l'album, et gérer votre compte. PicEvent n'affiche pas de publicité, ne revend pas vos données et ne les utilise pas à des fins de profilage.</p>
+<p>Base légale : l'exécution du contrat (fourniture du service) et votre consentement, recueilli lors de la création du compte.</p>
+
+<h2>4. Qui a accès à vos contenus ?</h2>
+<p>Les photos, vidéos et commentaires publiés dans un album ne sont visibles que par les personnes disposant du code d'invitation de cet album. Ils ne sont pas publics.</p>
+
+<h2>5. Où sont hébergées vos données ?</h2>
+<ul>
+<li><strong>Google Firebase</strong> (authentification et base de données) ;</li>
+<li><strong>Cloudinary</strong> (stockage des photos et vidéos).</li>
+</ul>
+<p>Ces prestataires peuvent traiter des données en dehors de l'Union européenne ; ces transferts sont encadrés par des garanties appropriées (clauses contractuelles types de la Commission européenne).</p>
+
+<h2>6. Combien de temps conservons-nous vos données ?</h2>
+<ul>
+<li>Chaque album expire automatiquement <strong>5 mois</strong> après sa création : ses photos, vidéos et commentaires sont alors définitivement supprimés, y compris des serveurs de stockage.</li>
+<li>Votre profil est conservé tant que votre compte existe. Vous pouvez le supprimer à tout moment (voir ci-dessous).</li>
+</ul>
+
+<h2>7. Vos droits (RGPD)</h2>
+<p>Vous disposez d'un droit d'accès, de rectification, d'effacement, de limitation et d'opposition sur vos données, ainsi que d'un droit à la portabilité.</p>
+<ul>
+<li><strong>Accès et portabilité</strong> : la rubrique « Mes données » de l'application vous permet de consulter et d'exporter vos données au format JSON.</li>
+<li><strong>Effacement</strong> : la suppression du compte, disponible dans l'application, efface réellement votre profil, vos photos, vidéos, commentaires et « j'aime », de notre base de données comme du stockage des médias.</li>
+<li>Pour toute autre demande : <a href="mailto:Piceventcontacte@gmail.com">Piceventcontacte@gmail.com</a>.</li>
+</ul>
+<p>Vous pouvez également adresser une réclamation à la CNIL (<a href="https://www.cnil.fr">www.cnil.fr</a>).</p>
+
+<h2>8. Âge minimum</h2>
+<p>Conformément au droit français, l'utilisation de PicEvent est réservée aux personnes d'au moins <strong>15 ans</strong>, ou de moins de 15 ans avec l'autorisation d'un titulaire de l'autorité parentale. Cette condition est acceptée lors de la création du compte.</p>
+
+<h2>9. Sécurité</h2>
+<p>Les échanges avec nos serveurs sont chiffrés (HTTPS) et l'accès aux données est limité par des règles de sécurité strictes. Aucun système n'étant infaillible, nous vous invitons à ne publier que des contenus que vous acceptez de partager avec les membres de vos albums.</p>
+
+<h2>10. Modifications</h2>
+<p>Cette politique peut être mise à jour ; la date en haut de page indique la dernière version. En cas de changement important, vous en serez informé dans l'application.</p>
+
+</div>
+</body>
+</html>
