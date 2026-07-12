@@ -1,1 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Terms of Use – PicEvent</title>
+<style>
+  :root { --bg:#0C0A09; --card:#171412; --text:#E7E2DC; --muted:#A39C93; --gold:#D4A853; --border:#2A2522; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--text);
+         font:16px/1.65 -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif; }
+  .wrap { max-width:760px; margin:0 auto; padding:40px 22px 80px; }
+  h1 { color:var(--gold); font-size:1.9rem; margin:0 0 4px; }
+  .sub { color:var(--muted); font-size:.9rem; margin-bottom:28px; }
+  h2 { color:var(--gold); font-size:1.15rem; margin:34px 0 10px; }
+  p, li { color:var(--text); }
+  ul { padding-left:22px; }
+  a { color:var(--gold); }
+  .lang { display:inline-block; margin-bottom:22px; font-size:.85rem;
+          border:1px solid var(--border); border-radius:20px; padding:6px 14px;
+          text-decoration:none; }
+  .box { background:var(--card); border:1px solid var(--border); border-radius:12px;
+         padding:16px 18px; margin:18px 0; font-size:.92rem; color:var(--muted); }
+</style>
+</head>
+<body>
+<div class="wrap">
+<a class="lang" href="terms-fr.html">🇫🇷 Version française</a>
+<h1>Terms of Use</h1>
+<div class="sub">Last updated: 12 July 2026</div>
 
+<h2>1. Purpose</h2>
+<p>These terms of use govern the use of the PicEvent mobile app, which lets you create photo and video albums shared between the participants of an event. By creating an account, you accept these terms in full.</p>
+<div class="box">Publisher and contact: <a href="mailto:Piceventcontacte@gmail.com">Piceventcontacte@gmail.com</a></div>
+
+<h2>2. Access to the service</h2>
+<ul>
+<li>Access is provided through an anonymous account: only a first name (or nickname) is required.</li>
+<li>The service is restricted to people aged <strong>15 or over</strong>, or under 15 with the consent of a parent or legal guardian.</li>
+<li>Joining an album is free for guests. Creating an album may be a paid feature; the price is shown before any payment.</li>
+</ul>
+
+<h2>3. How albums work</h2>
+<ul>
+<li>Each album can only be accessed with its invitation code. You are responsible for how you share that code.</li>
+<li>Each album automatically expires <strong>5 months</strong> after its creation: all of its content is then permanently deleted. Remember to save your photos before expiry.</li>
+<li>The album creator has administration tools, including removing content and deleting the album itself. Deleting an album is permanent for all of its members.</li>
+</ul>
+
+<h2>4. Your content and responsibilities</h2>
+<p>You remain the owner of the photos, videos and comments you post. You grant PicEvent a limited, non-exclusive, royalty-free licence to host and display this content solely to the members of the relevant album, for as long as the album exists.</p>
+<p>You must not post:</p>
+<ul>
+<li>content that is illegal, hateful, violent, pornographic or degrading;</li>
+<li>content that infringes copyright or other intellectual property rights;</li>
+<li>photos or videos of people without their consent (image rights), in particular of minors without the consent of their legal guardians.</li>
+</ul>
+<p>You are solely responsible for the content you post. The publisher may remove any manifestly unlawful content reported to it and suspend the account concerned.</p>
+
+<h2>5. Purchases</h2>
+<p>Payments are processed exclusively by Google Play or the App Store, under their own terms. Any refunds are governed by those platforms' policies and by applicable law.</p>
+
+<h2>6. Account deletion</h2>
+<p>You can delete your account at any time from within the app. Deletion is genuine and permanent: your profile, photos, videos, comments and likes are erased, as described in our <a href="privacy-en.html">privacy policy</a>.</p>
+
+<h2>7. Intellectual property</h2>
+<p>The PicEvent app, its name, logo and graphic elements are protected. Any unauthorised reproduction is prohibited.</p>
+
+<h2>8. Availability and liability</h2>
+<p>PicEvent is provided "as is". The publisher strives to keep the service available but does not guarantee uninterrupted or error-free operation. It cannot be held liable for the loss of content resulting from the normal expiry of an album, a principle stated when the album is created.</p>
+
+<h2>9. Changes to these terms</h2>
+<p>These terms may change; the applicable version is the one published on the date of use. You will be informed in the app of any substantial change.</p>
+
+<h2>10. Governing law</h2>
+<p>These terms are governed by French law. Any dispute falls under the jurisdiction of the competent French courts, subject to mandatory consumer-protection rules.</p>
+
+</div>
+</body>
+</html>
