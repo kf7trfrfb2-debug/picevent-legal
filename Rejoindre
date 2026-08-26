@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rejoindre un album — PicEvent</title>
+
+<!--
+  Page d'atterrissage des liens de partage.
+
+  POURQUOI ELLE EXISTE — le lien de partage vise un DESTINATAIRE dont on ignore
+  l'appareil. L'application ne peut pas choisir la bonne boutique à sa place :
+  un iPhone partage vers un Android et l'inverse. Seule une page ouverte sur
+  l'appareil du destinataire peut trancher.
+
+  Avant, le texte partagé contenait une URL Play Store en dur. Un invité
+  iPhone recevait un lien inutilisable.
+
+  À DÉPLOYER sur https://kf7trfrfb2-debug.github.io/picevent-legal/rejoindre.html
+  L'application pointe sur cette adresse ; si tu la déposes ailleurs, il faut
+  changer _lienPartage dans lib/screens/export_screen.dart.
+
+  Paramètre facultatif : ?code=ABC123 affiche le code de l'album.
+-->
+
+<style>
+  :root {
+    --fond: #0d0d0f;
+    --or: #d4af5f;
+    --or-clair: #e8cd8f;
+    --texte: #f2f2f2;
+    --gris: #9a9a9a;
+    --carte: #17171a;
+    --bord: #2a2a2e;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    background: var(--fond);
+    color: var(--texte);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+                 system-ui, sans-serif;
+    text-align: center;
+  }
+  main { width: 100%; max-width: 420px; }
+  .logo {
+    width: 88px; height: 88px; margin: 0 auto 20px;
+    border-radius: 22px;
+    background: linear-gradient(150deg, var(--or-clair), var(--or));
+    display: flex; align-items: center; justify-content: center;
+    font-size: 46px; font-weight: 800; color: #0d0d0f;
+    box-shadow: 0 0 44px rgba(212, 175, 95, .28);
+  }
+  h1 { margin: 0 0 8px; font-size: 30px; color: var(--or); letter-spacing: -.5px; }
+  .accroche { margin: 0 0 26px; color: var(--gris); font-size: 16px; line-height: 1.5; }
+  .code {
+    display: none;
+    margin: 0 0 26px; padding: 14px;
+    background: var(--carte); border: 1px solid var(--bord);
+    border-radius: 14px;
+  }
+  .code span { display: block; font-size: 11px; letter-spacing: 1.4px;
+               color: var(--gris); text-transform: uppercase; margin-bottom: 6px; }
+  .code strong { font-size: 26px; letter-spacing: 4px; color: var(--or); }
+  a.bouton {
+    display: block; padding: 17px; margin-bottom: 12px;
+    border-radius: 15px; text-decoration: none; font-size: 16px; font-weight: 700;
+  }
+  a.principal {
+    background: linear-gradient(120deg, var(--or-clair), var(--or));
+    color: #0d0d0f;
+  }
+  a.secondaire {
+    background: var(--carte); border: 1px solid var(--bord); color: var(--texte);
+    font-weight: 600;
+  }
+  .pied { margin-top: 26px; font-size: 12px; color: #666; line-height: 1.6; }
+  .pied a { color: #888; }
+</style>
+</head>
+<body>
+<main>
+  <div class="logo">P</div>
+  <h1>PicEvent</h1>
+  <p class="accroche">On t'a invité à rejoindre un album.<br>
+    Installe l'application pour y accéder.</p>
+
+  <div class="code" id="bloc-code">
+    <span>Code de l'album</span>
+    <strong id="valeur-code"></strong>
+  </div>
+
+  <a class="bouton principal" id="principal" href="#">Installer PicEvent</a>
+  <a class="bouton secondaire" id="secondaire" href="#"></a>
+
+  <p class="pied">
+    <span id="consigne">Une fois l'application installée, entre le code que
+    t'a communiqué l'organisateur dans « Rejoindre un album ».</span><br>
+    <a href="./">Conditions d'utilisation et confidentialité</a>
+  </p>
+</main>
+
+<script>
+(function () {
+  var APP_STORE  = 'https://apps.apple.com/app/id6805489498';
+  var PLAY_STORE =
+    'https://play.google.com/store/apps/details?id=com.picevent.picevent';
+
+  // Le code d'album, s'il a été transmis.
+  var params = new URLSearchParams(location.search);
+  var code = (params.get('code') || '').trim().toUpperCase();
+  if (/^[A-Z0-9]{4,10}$/.test(code)) {
+    document.getElementById('valeur-code').textContent = code;
+    document.getElementById('bloc-code').style.display = 'block';
+    document.getElementById('consigne').textContent =
+      'Une fois l\'application installée, entre le code ci-dessus dans ' +
+      '« Rejoindre un album ».';
+  }
+
+  var ua = navigator.userAgent || '';
+  var estIOS = /iPad|iPhone|iPod/.test(ua) ||
+    // iPadOS se déclare Macintosh depuis iOS 13 ; l'écran tactile le trahit.
+    (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1);
+  var estAndroid = /Android/.test(ua);
+
+  var principal = document.getElementById('principal');
+  var secondaire = document.getElementById('secondaire');
+
+  if (estIOS) {
+    principal.href = APP_STORE;
+    principal.textContent = 'Installer sur iPhone';
+    secondaire.href = PLAY_STORE;
+    secondaire.textContent = 'Je suis sur Android';
+  } else if (estAndroid) {
+    principal.href = PLAY_STORE;
+    principal.textContent = 'Installer sur Android';
+    secondaire.href = APP_STORE;
+    secondaire.textContent = 'Je suis sur iPhone';
+  } else {
+    // Ordinateur, ou appareil non reconnu : aucune redirection, on montre les
+    // deux. Deviner ici ferait plus de dégâts que de laisser choisir.
+    principal.href = APP_STORE;
+    principal.textContent = 'Télécharger sur l’App Store';
+    secondaire.href = PLAY_STORE;
+    secondaire.textContent = 'Télécharger sur Google Play';
+  }
+
+  // Sur mobile, on redirige tout seul : c'est ce qu'attend quelqu'un qui vient
+  // de toucher un lien dans une conversation. Le délai laisse la page
+  // s'afficher, pour que le code reste lisible si le retour arrière ramène ici.
+  if (estIOS || estAndroid) {
+    setTimeout(function () { location.href = principal.href; }, 1200);
+  }
+})();
+</script>
+</body>
+</html>
