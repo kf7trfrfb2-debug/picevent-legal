@@ -21,6 +21,14 @@
   changer lienRejoindre dans lib/services/legal_links.dart.
 
   Paramètre facultatif : ?code=ABC123 affiche le code de l'album.
+
+  C'EST AUSSI L'ADRESSE DES QR CODES — depuis le 14 septembre 2026, un QR code
+  PicEvent porte https://piceventapp.com/rejoindre.html?code=… Application
+  installée, iOS et Android l'ouvrent directement, sans passer par cette page
+  (fichiers .well-known/apple-app-site-association et assetlinks.json). Cette
+  page ne s'affiche donc qu'à qui n'a pas l'application, ou quand le lien est
+  ouvert dans un navigateur intégré qui ignore les liens universels : d'où le
+  lien « J'ai déjà PicEvent », par le schéma picevent://.
 -->
 
 <style>
@@ -79,6 +87,7 @@
     background: var(--carte); border: 1px solid var(--bord); color: var(--texte);
     font-weight: 600;
   }
+  a.deja { display: none; margin-top: 6px; color: var(--or); font-size: 14px; }
   .pied { margin-top: 26px; font-size: 12px; color: #666; line-height: 1.6; }
   .pied a { color: #888; }
 </style>
@@ -97,6 +106,7 @@
 
   <a class="bouton principal" id="principal" href="#">Installer PicEvent</a>
   <a class="bouton secondaire" id="secondaire" href="#"></a>
+  <a class="deja" id="deja" href="#">J'ai déjà PicEvent : ouvrir l'album</a>
 
   <p class="pied">
     <span id="consigne">Une fois l'application installée, entre le code que
@@ -128,6 +138,12 @@
     (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1);
   var estAndroid = /Android/.test(ua);
 
+  var deja = document.getElementById('deja');
+  if (/^[A-Z0-9]{4,10}$/.test(code) && (estIOS || estAndroid)) {
+    deja.href = 'picevent://rejoindre?code=' + encodeURIComponent(code);
+    deja.style.display = 'inline-block';
+  }
+
   var principal = document.getElementById('principal');
   var secondaire = document.getElementById('secondaire');
 
@@ -154,7 +170,10 @@
   // de toucher un lien dans une conversation. Le délai laisse la page
   // s'afficher, pour que le code reste lisible si le retour arrière ramène ici.
   if (estIOS || estAndroid) {
-    setTimeout(function () { location.href = principal.href; }, 1200);
+    var redirection = setTimeout(function () { location.href = principal.href; }, 1500);
+    // Quelqu'un qui touche la page a choisi : on ne l'emmène plus ailleurs.
+    document.addEventListener('touchstart', function () { clearTimeout(redirection); }, {once: true});
+    document.addEventListener('click', function () { clearTimeout(redirection); }, {once: true});
   }
 })();
 </script>

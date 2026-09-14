@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.picevent.picevent",
+      "sha256_cert_fingerprints": [
+        "43:1E:A0:E3:DC:F6:73:E3:76:B9:99:B3:66:0C:04:AC:D2:1F:41:53:3E:66:18:FC:37:F4:65:CF:86:0A:A7:34"
+      ]
+    }
+  }
+]

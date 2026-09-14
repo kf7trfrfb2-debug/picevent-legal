@@ -1,0 +1,15 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["CA26P477VT.com.picevent.picevent"],
+        "components": [
+          {
+            "/": "/rejoindre*",
+            "comment": "Invitation à un album : ouvre PicEvent au lieu du navigateur"
+          }
+        ]
+      }
+    ]
+  }
+}
