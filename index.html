@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PicEvent — l'album photo partagé de ton événement</title>
+<meta name="description" content="PicEvent : un album photo gratuit et privé pour ton mariage, ton anniversaire ou ta fête. Chaque invité y ajoute ses photos, et tu peux les commander en tirages.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23D4A853'/%3E%3Ctext x='32' y='45' font-family='Arial' font-weight='900' font-size='38' text-anchor='middle' fill='%230C0A09'%3EP%3C/text%3E%3C/svg%3E">
+<style>
+  :root { --bg:#0C0A09; --card:#171412; --text:#E7E2DC; --muted:#A39C93;
+          --gold:#D4A853; --gold-light:#E8CD8F; --border:#2A2522; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--text);
+         font:16px/1.6 -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif; }
+  a { color:var(--gold); }
+  .wrap { max-width:960px; margin:0 auto; padding:0 22px; }
+
+  header { display:flex; align-items:center; justify-content:space-between;
+           padding:22px 0; }
+  .marque { display:flex; align-items:center; gap:10px; text-decoration:none; }
+  .logo { width:38px; height:38px; border-radius:11px;
+          background:linear-gradient(150deg,var(--gold-light),var(--gold));
+          display:flex; align-items:center; justify-content:center;
+          font-weight:900; font-size:20px; color:var(--bg); }
+  .marque strong { color:var(--gold); font-size:1.25rem; letter-spacing:-.3px; }
+  nav a { color:var(--muted); text-decoration:none; margin-left:18px; font-size:.95rem; }
+  nav a:hover { color:var(--text); }
+
+  .hero { padding:56px 0 40px; text-align:center; }
+  .hero h1 { font-size:clamp(2rem,5vw,3.2rem); line-height:1.15; margin:0 0 18px;
+             letter-spacing:-1px; }
+  .hero h1 span { color:var(--gold); }
+  .hero p { color:var(--muted); font-size:1.12rem; max-width:640px; margin:0 auto 30px; }
+  .boutons { display:flex; gap:12px; justify-content:center; flex-wrap:wrap; }
+  .bouton { display:inline-block; padding:14px 22px; border-radius:14px;
+            font-weight:700; text-decoration:none; }
+  .principal { background:linear-gradient(120deg,var(--gold-light),var(--gold));
+               color:var(--bg); }
+  .secondaire { background:var(--card); border:1px solid var(--border);
+                color:var(--muted); }
+
+  section { padding:44px 0; border-top:1px solid var(--border); }
+  h2 { color:var(--gold); font-size:1.6rem; margin:0 0 8px; letter-spacing:-.4px; }
+  .intro { color:var(--muted); margin:0 0 26px; }
+  .grille { display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+            gap:14px; }
+  .carte { background:var(--card); border:1px solid var(--border); border-radius:16px;
+           padding:20px; }
+  .carte .num { color:var(--gold); font-weight:800; font-size:.85rem;
+                letter-spacing:1px; }
+  .carte h3 { margin:6px 0 6px; font-size:1.1rem; }
+  .carte p { margin:0; color:var(--muted); font-size:.95rem; }
+
+  table { width:100%; border-collapse:collapse; margin:4px 0 18px;
+          background:var(--card); border:1px solid var(--border); border-radius:14px;
+          overflow:hidden; }
+  th, td { padding:13px 16px; text-align:left; border-bottom:1px solid var(--border); }
+  th { color:var(--muted); font-weight:600; font-size:.85rem; letter-spacing:.5px; }
+  td.prix { text-align:right; font-weight:700; color:var(--gold); }
+  tr:last-child td { border-bottom:none; }
+  ul.infos { padding-left:20px; color:var(--text); }
+  ul.infos li { margin-bottom:6px; }
+
+  .contact { background:var(--card); border:1px solid var(--border); border-radius:16px;
+             padding:20px 22px; }
+  .contact p { margin:4px 0; }
+
+  footer { border-top:1px solid var(--border); padding:30px 0 50px; color:var(--muted);
+           font-size:.85rem; }
+  footer .liens a { color:var(--muted); margin-right:16px; display:inline-block;
+                    margin-bottom:6px; }
+  footer p { margin:8px 0; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <a class="marque" href="./"><div class="logo">P</div><strong>PicEvent</strong></a>
+  <nav><a href="#tirages">Tirages</a><a href="#contact">Contact</a></nav>
+</header>
+
+<div class="hero">
+  <h1>Toutes les photos de ton événement, <span>au même endroit.</span></h1>
+  <p>Crée un album gratuit, partage son code ou son QR code, et chaque invité y ajoute ses photos et vidéos. Mariage, anniversaire, fête : plus besoin de réclamer les photos à tout le monde.</p>
+  <div class="boutons">
+    <a class="bouton principal" href="https://play.google.com/store/apps/details?id=com.picevent.picevent">Télécharger sur Google Play</a>
+    <span class="bouton secondaire">Bientôt sur l'App Store</span>
+  </div>
+</div>
+
+<section>
+  <h2>Comment ça marche</h2>
+  <p class="intro">Trois gestes, et tout le monde partage ses souvenirs au même endroit.</p>
+  <div class="grille">
+    <div class="carte"><div class="num">1</div><h3>Crée ton album</h3>
+      <p>Gratuit, et valable cinq mois après sa création.</p></div>
+    <div class="carte"><div class="num">2</div><h3>Invite</h3>
+      <p>Partage le code de l'album ou fais scanner son QR code. Rejoindre l'album est gratuit.</p></div>
+    <div class="carte"><div class="num">3</div><h3>Partagez</h3>
+      <p>Chacun ajoute ses photos et vidéos, commente et aime celles des autres.</p></div>
+  </div>
+</section>
+
+<section id="tirages">
+  <h2>Tirages photo</h2>
+  <p class="intro">Commande tes photos préférées sur papier, directement depuis l'album.</p>
+  <table>
+    <thead><tr><th>FORMAT</th><th style="text-align:right">PRIX DU TIRAGE</th></tr></thead>
+    <tbody>
+      <tr><td>5 × 15 cm</td><td class="prix">0,15 €</td></tr>
+      <tr><td>10 × 15 cm</td><td class="prix">0,25 €</td></tr>
+      <tr><td>15 × 15 cm</td><td class="prix">0,39 €</td></tr>
+      <tr><td>15 × 20 cm</td><td class="prix">0,49 €</td></tr>
+    </tbody>
+  </table>
+  <ul class="infos">
+    <li><strong>Livraison en France métropolitaine : 5,50 €</strong> par commande, quel que soit le nombre de tirages.</li>
+    <li>Impression sur papier photo brillant par notre imprimeur partenaire, envoi par La Poste sous deux jours ouvrés. Lettre sans numéro de suivi, distribuée en trois jours ouvrés environ.</li>
+    <li>Paiement sécurisé par carte, via Stripe, au moment de la commande. TVA non applicable, article 293 B du CGI.</li>
+    <li>Tirages personnalisés : pas de droit de rétractation. Un tirage abîmé, perdu ou non conforme est réimprimé ou remboursé.</li>
+  </ul>
+  <p>Tous les détails figurent dans les <a href="cgv-fr.html">conditions générales de vente</a>.</p>
+</section>
+
+<section>
+  <h2>Tes albums restent privés</h2>
+  <p class="intro">Seules les personnes qui ont le code d'un album peuvent le voir. Pas de publicité, aucune revente de données. Chaque album et ses contenus sont supprimés au bout de cinq mois. <a href="privacy-fr.html">Politique de confidentialité</a></p>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <p class="intro">Une question sur l'application ou sur une commande ? Pour une commande, indique sa référence, visible dans « Mes commandes ».</p>
+  <div class="contact">
+    <p>E-mail : <a href="mailto:piceventcontacte@gmail.com">piceventcontacte@gmail.com</a></p>
+    <p>Téléphone : <a href="tel:+33631982126">06 31 98 21 26</a></p>
+    <p>Adresse : 15 bis rue de la Grange, 53240 Saint-Germain-d'Anxure</p>
+  </div>
+</section>
+
+<footer>
+  <div class="liens">
+    <a href="terms-fr.html">Conditions d'utilisation</a>
+    <a href="cgv-fr.html">Conditions de vente</a>
+    <a href="privacy-fr.html">Confidentialité</a>
+    <a href="delete-account-fr.html">Supprimer son compte</a>
+    <a href="rejoindre.html">Rejoindre un album</a>
+  </div>
+  <p>PicEvent est édité par Jordy Breux, entrepreneur individuel (micro-entreprise) · SIRET 109 208 520 00014 · TVA non applicable, article 293 B du CGI.</p>
+  <p>Site hébergé par GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, États-Unis.</p>
+</footer>
+
+</div>
+</body>
+</html>

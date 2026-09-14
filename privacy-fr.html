@@ -21,75 +21,96 @@
           text-decoration:none; }
   .box { background:var(--card); border:1px solid var(--border); border-radius:12px;
          padding:16px 18px; margin:18px 0; font-size:.92rem; color:var(--muted); }
+  .a-completer { background:#5c1f1f; color:#ffd7d7; padding:1px 6px; border-radius:4px; }
 </style>
 </head>
 <body>
 <div class="wrap">
 <a class="lang" href="privacy-en.html">🇬🇧 English version</a>
 <h1>Politique de confidentialité</h1>
-<div class="sub">Dernière mise à jour : 9 septembre 2026</div>
+<div class="sub">Dernière mise à jour : 14 septembre 2026</div>
 
 <h2>1. Qui sommes-nous ?</h2>
-<p>PicEvent est une application mobile de partage de photos et vidéos entre participants d'un même événement (mariage, anniversaire, voyage, événement d'entreprise…). L'éditeur de PicEvent est le responsable du traitement de vos données.</p>
-<div class="box">Contact : <a href="mailto:Piceventcontacte@gmail.com">Piceventcontacte@gmail.com</a></div>
+<p>PicEvent est une application mobile de partage de photos et vidéos entre participants d'un même événement (mariage, anniversaire, voyage, événement d'entreprise…). Elle permet aussi de commander des tirages de ces photos.</p>
+<div class="box">
+Responsable du traitement : Jordy Breux, entrepreneur individuel<br>
+SIRET : 109 208 520 00014<br>
+Adresse : 15 bis rue de la Grange, 53240 Saint-Germain-d'Anxure<br>
+Contact : <a href="mailto:piceventcontacte@gmail.com">piceventcontacte@gmail.com</a>
+</div>
 
 <h2>2. Quelles données collectons-nous ?</h2>
 <ul>
 <li><strong>Profil</strong> : le prénom (ou pseudonyme) que vous saisissez, un nom d'utilisateur généré automatiquement, une couleur ou photo d'avatar si vous en choisissez une, et la date de création du compte.</li>
 <li><strong>Identifiant technique</strong> : un identifiant anonyme fourni par Firebase Authentication. Rejoindre un album et y publier ne demande ni adresse e-mail, ni numéro de téléphone, ni mot de passe.</li>
-<li><strong>Compte permanent</strong> : la <em>création</em> d'un album exige un compte durable, par adresse e-mail et mot de passe ou via Google. Nous conservons alors votre adresse e-mail, et le mot de passe est géré par Firebase Authentication sans que nous y ayons accès. Cette exigence protège votre album : un compte anonyme disparaît à la réinstallation, et l'album avec lui.</li>
+<li><strong>Compte permanent</strong> : créer un album ou commander des tirages exige un compte durable, par adresse e-mail et mot de passe, par Google ou par Apple. Nous conservons alors l'adresse e-mail du compte. Avec « Se connecter avec Apple », il peut s'agir d'une adresse relais fournie par Apple. Le mot de passe est géré par Firebase Authentication sans que nous y ayons accès.</li>
 <li><strong>Contenus</strong> : les photos, vidéos, commentaires et « j'aime » que vous publiez dans les albums, ainsi que la liste des albums que vous créez ou rejoignez.</li>
 <li><strong>Signalements</strong> : si vous signalez une photo ou un commentaire, nous enregistrons l'identifiant du contenu visé, celui de l'album, le motif choisi et vos éventuelles précisions. Votre identifiant de compte est conservé séparément, hors de portée de l'organisateur.</li>
-<li><strong>Préférences</strong> : la langue choisie (français/anglais), stockée uniquement sur votre appareil.</li>
-<li><strong>Données bancaires</strong> : aucune. L'application est gratuite et ne contient aucun achat intégré. Nous ne recevons ni ne stockons de moyen de paiement.</li>
+<li><strong>Commandes de tirages</strong> : le nom et l'adresse du destinataire, les photos, formats, cadrages et quantités commandés, les montants, les dates et l'avancement de la commande.</li>
+<li><strong>Paiement</strong> : les données de carte sont saisies dans le formulaire sécurisé de Stripe et traitées par Stripe. Nous n'y avons jamais accès : nous recevons seulement l'état du paiement et ses références. L'adresse e-mail de votre compte est transmise à Stripe pour vous envoyer le reçu.</li>
+<li><strong>Notifications</strong> : un jeton propre à votre appareil, fourni par Firebase Cloud Messaging, qui nous permet de vous prévenir d'une nouvelle photo, d'un commentaire ou d'un « j'aime ». Vous pouvez désactiver les notifications dans les réglages de votre téléphone.</li>
+<li><strong>Diagnostic</strong> : en cas de plantage, un rapport technique (modèle d'appareil, version du système et de l'application, déroulé de l'erreur), rattaché à l'identifiant technique de votre compte, via Firebase Crashlytics.</li>
+<li><strong>Sécurité</strong> : une attestation de l'appareil (App Check, qui s'appuie sur DeviceCheck d'Apple ou Play Integrity de Google), qui vérifie que les requêtes proviennent bien de l'application officielle.</li>
+<li><strong>Données stockées uniquement sur votre téléphone</strong> : la langue choisie, la liste des contenus que vous avez masqués, et la dernière adresse de livraison saisie, pour ne pas la retaper à la commande suivante.</li>
 </ul>
 
-<h2>3. Pourquoi ces données ?</h2>
-<p>Uniquement pour faire fonctionner le service : créer et rejoindre des albums, afficher vos contenus aux autres participants de l'album, et gérer votre compte. PicEvent n'affiche pas de publicité, ne revend pas vos données et ne les utilise pas à des fins de profilage.</p>
-<p>Base légale : l'exécution du contrat (fourniture du service) et votre consentement, recueilli lors de la création du compte.</p>
-
-<h2>4. Qui a accès à vos contenus ?</h2>
-<p>Les photos, vidéos et commentaires publiés dans un album ne sont visibles que par les personnes disposant du code d'invitation de cet album. Ils ne sont pas publics.</p>
-
-<h2>5. Où sont hébergées vos données ?</h2>
+<h2>3. Pourquoi ces données, et sur quelle base ?</h2>
 <ul>
-<li><strong>Google Firebase</strong> (authentification et base de données) ;</li>
-<li><strong>Cloudinary</strong> (stockage des photos et vidéos).</li>
+<li><strong>Faire fonctionner le service</strong> (albums, partage, compte) : exécution du contrat qui nous lie, les conditions générales d'utilisation.</li>
+<li><strong>Traiter vos commandes</strong> (fabrication, livraison, réclamations) : exécution du contrat de vente. <strong>Conserver les pièces comptables</strong> : obligation légale.</li>
+<li><strong>Vous notifier</strong> : votre consentement, donné en autorisant les notifications sur votre téléphone.</li>
+<li><strong>Corriger les plantages et protéger le service contre les abus</strong> : notre intérêt légitime à fournir une application fiable et sûre.</li>
 </ul>
-<p>Ces prestataires peuvent traiter des données en dehors de l'Union européenne ; ces transferts sont encadrés par des garanties appropriées (clauses contractuelles types de la Commission européenne).</p>
+<p>PicEvent n'affiche pas de publicité, ne revend pas vos données et ne les utilise pas à des fins de profilage.</p>
 
-<h2>6. Combien de temps conservons-nous vos données ?</h2>
+<h2>4. Qui a accès à vos données ?</h2>
 <ul>
-<li>Chaque album expire automatiquement <strong>5 mois</strong> après sa création : ses photos, vidéos et commentaires sont alors définitivement supprimés, y compris des serveurs de stockage.</li>
-<li>Votre profil est conservé tant que votre compte existe. Vous pouvez le supprimer à tout moment (voir ci-dessous).</li>
+<li><strong>Les membres de l'album</strong> : les photos, vidéos et commentaires publiés dans un album ne sont visibles que par les personnes disposant de son code d'invitation. Ils ne sont pas publics.</li>
+<li><strong>Nos prestataires</strong>, uniquement pour ce qui les concerne :
+  <ul>
+  <li><strong>Google Firebase</strong> : authentification, base de données, notifications, diagnostic et sécurité ;</li>
+  <li><strong>Cloudinary</strong> : stockage des photos et vidéos ;</li>
+  <li><strong>Stripe</strong> : paiement des commandes ;</li>
+  <li><strong>Familink</strong>, notre imprimeur : il reçoit le nom et l'adresse du destinataire, et les photos commandées, pour imprimer et expédier les tirages. Il ne reçoit ni votre e-mail ni votre téléphone.</li>
+  </ul>
+</li>
+</ul>
+<p>Google, Cloudinary et Stripe peuvent traiter des données en dehors de l'Union européenne. Ces transferts sont encadrés par des garanties appropriées : clauses contractuelles types de la Commission européenne ou cadre de protection des données UE–États-Unis.</p>
+
+<h2>5. Combien de temps conservons-nous vos données ?</h2>
+<ul>
+<li><strong>Albums</strong> : chaque album expire automatiquement <strong>5 mois</strong> après sa création. Ses photos, vidéos, commentaires et signalements sont alors définitivement supprimés, y compris des serveurs de stockage.</li>
+<li><strong>Profil</strong> : tant que votre compte existe. Vous pouvez le supprimer à tout moment (voir ci-dessous).</li>
+<li><strong>Commandes</strong> : le nom et l'adresse de livraison sont effacés <strong>six mois</strong> après la commande, une fois celle-ci terminée. Le contenu, les montants et les dates sont conservés <strong>dix ans</strong>, durée légale de conservation des pièces comptables (article L. 123-22 du Code de commerce).</li>
+<li><strong>Commandes jamais payées</strong> : annulées au bout de 48 heures, avec effacement du nom et de l'adresse.</li>
+<li><strong>Rapports de plantage</strong> : 90 jours.</li>
 </ul>
 
-<h2>7. Vos droits (RGPD)</h2>
+<h2>6. Vos droits (RGPD)</h2>
 <p>Vous disposez d'un droit d'accès, de rectification, d'effacement, de limitation et d'opposition sur vos données, ainsi que d'un droit à la portabilité.</p>
 <ul>
 <li><strong>Accès et portabilité</strong> : la rubrique « Mes données » de l'application vous permet de consulter et d'exporter vos données au format JSON.</li>
-<li><strong>Effacement</strong> : la suppression du compte, disponible dans l'application, efface réellement votre profil, vos photos, vidéos, commentaires et « j'aime », de notre base de données comme du stockage des médias.</li>
-<li>Pour toute autre demande : <a href="mailto:Piceventcontacte@gmail.com">Piceventcontacte@gmail.com</a>.</li>
+<li><strong>Effacement</strong> : la suppression du compte, disponible dans l'application, efface réellement votre profil, vos photos, vidéos, commentaires et « j'aime », de notre base de données comme du stockage des médias. Vos commandes, qui sont des pièces comptables, sont conservées mais anonymisées : nom, adresse et lien avec votre compte sont effacés. Une commande payée pas encore expédiée reste intacte le temps d'être livrée, puis elle est détachée de votre compte dès son expédition ; son nom et son adresse sont effacés six mois après la commande, comme pour toutes les commandes.</li>
+<li>Pour toute autre demande : <a href="mailto:piceventcontacte@gmail.com">piceventcontacte@gmail.com</a>.</li>
 </ul>
 <p>Vous pouvez également adresser une réclamation à la CNIL (<a href="https://www.cnil.fr">www.cnil.fr</a>).</p>
 
-<h2>8. Âge minimum</h2>
+<h2>7. Âge minimum</h2>
 <p>Conformément au droit français, l'utilisation de PicEvent est réservée aux personnes d'au moins <strong>15 ans</strong>, ou de moins de 15 ans avec l'autorisation d'un titulaire de l'autorité parentale. Cette condition est acceptée lors de la création du compte.</p>
 
-<h2>9. Sécurité</h2>
+<h2>8. Sécurité</h2>
 <p>Les échanges avec nos serveurs sont chiffrés (HTTPS) et l'accès aux données est limité par des règles de sécurité strictes. Aucun système n'étant infaillible, nous vous invitons à ne publier que des contenus que vous acceptez de partager avec les membres de vos albums.</p>
 
-<h2>10. Modifications</h2>
-<p>Cette politique peut être mise à jour ; la date en haut de page indique la dernière version. En cas de changement important, vous en serez informé dans l'application.</p>
-
-<h2>11. Signalement et modération</h2>
+<h2>9. Signalement et modération</h2>
 <p>Tout invité peut signaler une photo ou un commentaire qu'il juge inapproprié, directement depuis l'application.</p>
 <p>L'organisateur de l'album est alors prévenu et peut consulter le contenu visé, le motif et les précisions, afin de décider de sa suppression. <strong>Il n'a en revanche aucun moyen de savoir qui a signalé</strong> : votre identité n'est accessible qu'à nos systèmes internes, et sert uniquement à traiter les usages abusifs de cette fonction.</p>
 <div class="box">Cette séparation est volontaire. Un organisateur peut exclure un invité de son album ; s'il savait qui vient de signaler une de ses photos, il pourrait exercer des représailles.</div>
-<p>Les signalements sont conservés pendant la durée de vie de l'album, soit cinq mois, puis supprimés avec lui.</p>
 
-<h2>12. Contenus masqués</h2>
+<h2>10. Contenus masqués</h2>
 <p>Vous pouvez masquer une photo ou un commentaire pour vous seul, sans le signaler. Cette liste est <strong>stockée uniquement sur votre téléphone</strong> et n'est jamais transmise à nos serveurs : ni l'organisateur ni les autres invités ne peuvent savoir ce que vous avez choisi de ne plus voir. Elle disparaît si vous désinstallez l'application.</p>
+
+<h2>11. Modifications</h2>
+<p>Cette politique peut être mise à jour ; la date en haut de page indique la dernière version. En cas de changement important, vous en serez informé dans l'application.</p>
 
 </div>
 </body>
