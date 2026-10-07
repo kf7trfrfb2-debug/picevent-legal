@@ -28,7 +28,7 @@
 <div class="wrap">
 <a class="lang" href="privacy-en.html">🇬🇧 English version</a>
 <h1>Politique de confidentialité</h1>
-<div class="sub">Dernière mise à jour : 17 septembre 2026</div>
+<div class="sub">Dernière mise à jour : 7 octobre 2026</div>
 
 <h2>1. Qui sommes-nous ?</h2>
 <p>PicEvent est une application mobile de partage de photos et vidéos entre participants d'un même événement (mariage, anniversaire, voyage, événement d'entreprise…). Elle permet aussi de commander des tirages de ces photos.</p>
@@ -48,16 +48,17 @@ Contact : <a href="mailto:piceventcontact@gmail.com">piceventcontact@gmail.com</
 <li><strong>Signalements</strong> : si vous signalez une photo ou un commentaire, nous enregistrons l'identifiant du contenu visé, celui de l'album, le motif choisi et vos éventuelles précisions. Votre identifiant de compte est conservé séparément, hors de portée de l'organisateur.</li>
 <li><strong>Commandes de tirages</strong> : le nom et l'adresse du destinataire, les photos, formats, cadrages et quantités commandés, les montants, les dates et l'avancement de la commande.</li>
 <li><strong>Paiement</strong> : les données de carte sont saisies dans le formulaire sécurisé de Stripe et traitées par Stripe. Nous n'y avons jamais accès : nous recevons seulement l'état du paiement et ses références. L'adresse e-mail de votre compte est transmise à Stripe pour vous envoyer le reçu.</li>
+<li><strong>Pass Événement</strong> : il s'achète dans l'application, par l'App Store d'Apple ou Google Play, qui encaissent le paiement. Nous n'avons jamais accès à votre moyen de paiement : nous recevons seulement la preuve d'achat, que nous faisons vérifier par Apple ou Google, et nous conservons l'identifiant de la transaction, l'album concerné et votre identifiant de compte, pour qu'un même achat ne serve qu'une fois.</li>
 <li><strong>Notifications</strong> : un jeton propre à votre appareil, fourni par Firebase Cloud Messaging, qui nous permet de vous prévenir d'une nouvelle photo, d'un commentaire ou d'un « j'aime ». Vous pouvez désactiver les notifications dans les réglages de votre téléphone.</li>
 <li><strong>Diagnostic</strong> : en cas de plantage, un rapport technique (modèle d'appareil, version du système et de l'application, déroulé de l'erreur), rattaché à l'identifiant technique de votre compte, via Firebase Crashlytics.</li>
 <li><strong>Sécurité</strong> : une attestation de l'appareil (App Check, qui s'appuie sur DeviceCheck d'Apple ou Play Integrity de Google), qui vérifie que les requêtes proviennent bien de l'application officielle.</li>
-<li><strong>Données stockées uniquement sur votre téléphone</strong> : la langue choisie, la liste des contenus que vous avez masqués, et la dernière adresse de livraison saisie, pour ne pas la retaper à la commande suivante.</li>
+<li><strong>Données stockées uniquement sur votre téléphone</strong> : la langue choisie, la liste des contenus que vous avez masqués, la dernière adresse de livraison saisie, pour ne pas la retaper à la commande suivante, et la liste des photos en cours d'envoi, pour reprendre l'envoi si l'application est fermée.</li>
 </ul>
 
 <h2>3. Pourquoi ces données, et sur quelle base ?</h2>
 <ul>
 <li><strong>Faire fonctionner le service</strong> (albums, partage, compte) : exécution du contrat qui nous lie, les conditions générales d'utilisation.</li>
-<li><strong>Traiter vos commandes</strong> (fabrication, livraison, réclamations) : exécution du contrat de vente. <strong>Conserver les pièces comptables</strong> : obligation légale.</li>
+<li><strong>Traiter vos commandes et vos achats du Pass Événement</strong> (fabrication, livraison, activation du Pass, réclamations) : exécution du contrat de vente. <strong>Conserver les pièces comptables</strong> : obligation légale.</li>
 <li><strong>Vous notifier</strong> : votre consentement, donné en autorisant les notifications sur votre téléphone.</li>
 <li><strong>Corriger les plantages et protéger le service contre les abus</strong> : notre intérêt légitime à fournir une application fiable et sûre.</li>
 </ul>
@@ -66,10 +67,12 @@ Contact : <a href="mailto:piceventcontact@gmail.com">piceventcontact@gmail.com</
 <h2>4. Qui a accès à vos données ?</h2>
 <ul>
 <li><strong>Les membres de l'album</strong> : les photos, vidéos et commentaires publiés dans un album ne sont visibles que par les personnes disposant de son code d'invitation. Ils ne sont pas publics.</li>
+<li><strong>Le diaporama en direct</strong> (Pass Événement) : l'organisateur d'un album peut créer un lien secret qui affiche les <strong>photos</strong> de l'album sur un écran (télévision, ordinateur, vidéoprojecteur), avec le prénom de leur auteur. Toute personne qui dispose de ce lien voit ces photos, sans compte ni code. Les vidéos et les commentaires n'y apparaissent pas. L'organisateur peut à tout moment créer un nouveau lien, ce qui désactive l'ancien.</li>
 <li><strong>Nos prestataires</strong>, uniquement pour ce qui les concerne :
   <ul>
-  <li><strong>Google Firebase</strong> : authentification, base de données, notifications, diagnostic et sécurité ;</li>
-  <li><strong>Cloudinary</strong> : stockage des photos et vidéos ;</li>
+  <li><strong>Google Firebase</strong> : authentification, base de données, stockage des photos et vidéos (dans l'Union européenne, en Belgique), notifications, diagnostic et sécurité ;</li>
+  <li><strong>Cloudinary</strong> : stockage des photos et vidéos publiées avant le 7 octobre 2026, jusqu'à la suppression de leur album ;</li>
+  <li><strong>Apple</strong> et <strong>Google</strong> : paiement et vérification du Pass Événement ;</li>
   <li><strong>Stripe</strong> : paiement des commandes ;</li>
   <li><strong>Familink</strong>, notre imprimeur : il reçoit le nom et l'adresse du destinataire, et les photos commandées, pour imprimer et expédier les tirages. Il ne reçoit ni votre e-mail ni votre téléphone.</li>
   </ul>
@@ -84,6 +87,7 @@ Contact : <a href="mailto:piceventcontact@gmail.com">piceventcontact@gmail.com</
 <li><strong>Profil</strong> : tant que votre compte existe. Vous pouvez le supprimer à tout moment (voir ci-dessous).</li>
 <li><strong>Commandes</strong> : le nom et l'adresse de livraison sont effacés <strong>six mois</strong> après la commande, une fois celle-ci terminée. Le contenu, les montants et les dates sont conservés <strong>dix ans</strong>, durée légale de conservation des pièces comptables (article L. 123-22 du Code de commerce).</li>
 <li><strong>Commandes jamais payées</strong> : annulées au bout de 48 heures, avec effacement du nom et de l'adresse.</li>
+<li><strong>Achats du Pass Événement</strong> : l'identifiant de la transaction, l'album et la date sont conservés <strong>dix ans</strong>, comme pièce comptable. Le lien avec votre compte est effacé si vous supprimez votre compte.</li>
 <li><strong>Rapports de plantage</strong> : 90 jours.</li>
 </ul>
 

@@ -27,70 +27,94 @@
 <div class="wrap">
 <a class="lang" href="privacy-fr.html">🇫🇷 Version française</a>
 <h1>Privacy Policy</h1>
-<div class="sub">Last updated: 17 September 2026</div>
+<div class="sub">Last updated: 7 October 2026</div>
 
 <h2>1. Who are we?</h2>
-<p>PicEvent is a mobile app for sharing photos and videos between participants of the same event (wedding, birthday, trip, corporate event…). The publisher of PicEvent is the data controller.</p>
-<div class="box">Contact: <a href="mailto:piceventcontact@gmail.com">piceventcontact@gmail.com</a></div>
+<p>PicEvent is a mobile app for sharing photos and videos between participants of the same event (wedding, birthday, trip, corporate event…). It also lets you order prints of those photos.</p>
+<div class="box">
+Data controller: Jordy Breux, sole trader (entrepreneur individuel)<br>
+SIRET: 109 208 520 00014<br>
+Address: 15 bis rue de la Grange, 53240 Saint-Germain-d'Anxure, France<br>
+Contact: <a href="mailto:piceventcontact@gmail.com">piceventcontact@gmail.com</a>
+</div>
 
 <h2>2. What data do we collect?</h2>
 <ul>
 <li><strong>Profile</strong>: the first name (or nickname) you enter, an automatically generated username, an avatar colour or photo if you choose one, and the account creation date.</li>
-<li><strong>Technical identifier</strong>: an anonymous identifier provided by Firebase Authentication. Joining an album and posting to it requires no email address, phone number or password.</li>
-<li><strong>Permanent account</strong>: <em>creating</em> an album requires a durable account, either with an email address and password or through Google. We then store your email address; the password is handled by Firebase Authentication and is never accessible to us. This requirement protects your album: an anonymous account disappears on reinstall, and the album would go with it.</li>
+<li><strong>Technical identifier</strong>: an anonymous identifier provided by Firebase Authentication. Joining an album and posting in it requires no e-mail address, phone number or password.</li>
+<li><strong>Permanent account</strong>: creating an album or ordering prints requires a lasting account, with an e-mail address and password, Google or Apple. We then keep the account's e-mail address. With “Sign in with Apple”, this may be a relay address provided by Apple. The password is managed by Firebase Authentication; we never have access to it.</li>
 <li><strong>Content</strong>: the photos, videos, comments and likes you post in albums, and the list of albums you create or join.</li>
-<li><strong>Reports</strong>: if you report a photo or comment, we record the identifier of the reported content, the album identifier, the selected reason and any details you provide. Your account identifier is stored separately, out of reach of the organiser.</li>
-<li><strong>Preferences</strong>: your chosen language (French/English), stored only on your device.</li>
-<li><strong>Payment details</strong>: none. The app is free and contains no in-app purchases. We never receive or store a payment method.</li>
+<li><strong>Reports</strong>: if you report a photo or comment, we record the identifier of the content, of the album, the reason chosen and any details you add. Your account identifier is stored separately, out of the organiser's reach.</li>
+<li><strong>Print orders</strong>: the recipient's name and address, the photos, sizes, crops and quantities ordered, the amounts, dates and order status.</li>
+<li><strong>Payment</strong>: card details are entered in Stripe's secure form and processed by Stripe. We never have access to them: we only receive the payment status and its references. Your account's e-mail address is passed to Stripe so it can send you the receipt.</li>
+<li><strong>Event Pass</strong>: it is bought in the app, through Apple's App Store or Google Play, which collect the payment. We never have access to your payment method: we only receive the proof of purchase, which we have verified by Apple or Google, and we keep the transaction identifier, the album concerned and your account identifier, so that a purchase can only be used once.</li>
+<li><strong>Notifications</strong>: a token specific to your device, provided by Firebase Cloud Messaging, so we can tell you about a new photo, comment or like. You can turn notifications off in your phone's settings.</li>
+<li><strong>Diagnostics</strong>: if the app crashes, a technical report (device model, system and app version, error trace), linked to your account's technical identifier, via Firebase Crashlytics.</li>
+<li><strong>Security</strong>: a device attestation (App Check, based on Apple's DeviceCheck or Google's Play Integrity), which checks that requests really come from the official app.</li>
+<li><strong>Data stored only on your phone</strong>: your chosen language, the list of content you have hidden, the last delivery address entered, so you don't have to type it again, and the list of photos being uploaded, so the upload can resume if the app is closed.</li>
 </ul>
 
-<h2>3. Why do we process this data?</h2>
-<p>Solely to operate the service: creating and joining albums, showing your content to the other members of the album, and managing your account. PicEvent shows no ads, never sells your data and does not use it for profiling.</p>
-<p>Legal basis: performance of the contract (providing the service) and your consent, given when creating your account.</p>
-
-<h2>4. Who can see your content?</h2>
-<p>Photos, videos and comments posted in an album are only visible to people who have that album's invitation code. They are not public.</p>
-
-<h2>5. Where is your data hosted?</h2>
+<h2>3. Why this data, and on what legal basis?</h2>
 <ul>
-<li><strong>Google Firebase</strong> (authentication and database);</li>
-<li><strong>Cloudinary</strong> (photo and video storage).</li>
+<li><strong>Running the service</strong> (albums, sharing, account): performance of the contract between us, the terms of use.</li>
+<li><strong>Handling your orders and Event Pass purchases</strong> (production, delivery, Pass activation, complaints): performance of the sales contract. <strong>Keeping accounting records</strong>: legal obligation.</li>
+<li><strong>Notifying you</strong>: your consent, given by allowing notifications on your phone.</li>
+<li><strong>Fixing crashes and protecting the service against abuse</strong>: our legitimate interest in providing a reliable and secure app.</li>
 </ul>
-<p>These providers may process data outside the European Union; such transfers are covered by appropriate safeguards (the European Commission's standard contractual clauses).</p>
+<p>PicEvent shows no advertising, does not sell your data and does not use it for profiling.</p>
 
-<h2>6. How long do we keep your data?</h2>
+<h2>4. Who has access to your data?</h2>
 <ul>
-<li>Every album automatically expires <strong>5 months</strong> after its creation: its photos, videos and comments are then permanently deleted, including from the media storage servers.</li>
-<li><strong>Photos in a print order</strong>: if a photo is part of an order in progress when you delete it, or when you delete the album or your account, its file is kept, outside the app, until the order ships and for <strong>60 days at most</strong>. It is required to fulfil your order, and it is then destroyed automatically. Everything else is deleted immediately: the photo in the album, its comments, the album and the account.</li>
-<li>Your profile is kept for as long as your account exists. You can delete it at any time (see below).</li>
+<li><strong>Album members</strong>: photos, videos and comments posted in an album are visible only to people who have its invitation code. They are not public.</li>
+<li><strong>The live slideshow</strong> (Event Pass): an album's organiser can create a secret link that shows the album's <strong>photos</strong> on a screen (TV, computer, projector), with their author's first name. Anyone who has this link sees those photos, without an account or code. Videos and comments do not appear. The organiser can create a new link at any time, which disables the old one.</li>
+<li><strong>Our service providers</strong>, only for what concerns them:
+  <ul>
+  <li><strong>Google Firebase</strong>: authentication, database, photo and video storage (in the European Union, in Belgium), notifications, diagnostics and security;</li>
+  <li><strong>Cloudinary</strong>: storage of photos and videos posted before 7 October 2026, until their album is deleted;</li>
+  <li><strong>Apple</strong> and <strong>Google</strong>: payment and verification of the Event Pass;</li>
+  <li><strong>Stripe</strong>: payment of print orders;</li>
+  <li><strong>Familink</strong>, our printer: it receives the recipient's name and address and the photos ordered, to print and ship them. It receives neither your e-mail nor your phone number.</li>
+  </ul>
+</li>
+</ul>
+<p>Google, Cloudinary and Stripe may process data outside the European Union. These transfers are covered by appropriate safeguards: the European Commission's standard contractual clauses or the EU–US Data Privacy Framework.</p>
+
+<h2>5. How long do we keep your data?</h2>
+<ul>
+<li><strong>Albums</strong>: each album expires automatically <strong>5 months</strong> after its creation. Its photos, videos, comments and reports are then permanently deleted, including from the storage servers.</li>
+<li><strong>Photos ordered as prints</strong>: if a photo is part of an order in progress when you delete it, or when you delete the album or your account, its file is kept, outside the app, until the order ships and for <strong>60 days at most</strong>. It is needed to fulfil your order, and is then destroyed automatically. Everything else is deleted immediately: the photo in the album, its comments, the album and the account.</li>
+<li><strong>Profile</strong>: as long as your account exists. You can delete it at any time (see below).</li>
+<li><strong>Orders</strong>: the delivery name and address are erased <strong>six months</strong> after the order, once it is complete. The content, amounts and dates are kept for <strong>ten years</strong>, the legal retention period for accounting records (article L. 123-22 of the French Commercial Code).</li>
+<li><strong>Unpaid orders</strong>: cancelled after 48 hours, with the name and address erased.</li>
+<li><strong>Event Pass purchases</strong>: the transaction identifier, the album and the date are kept for <strong>ten years</strong>, as accounting records. The link to your account is erased if you delete your account.</li>
+<li><strong>Crash reports</strong>: 90 days.</li>
 </ul>
 
-<h2>7. Your rights (GDPR)</h2>
-<p>You have the right to access, rectify, erase, restrict and object to the processing of your data, as well as a right to data portability.</p>
+<h2>6. Your rights (GDPR)</h2>
+<p>You have the right to access, rectify, erase, restrict and object to the processing of your data, as well as the right to data portability.</p>
 <ul>
-<li><strong>Access and portability</strong>: the "My data" section of the app lets you view and export your data in JSON format.</li>
-<li><strong>Erasure</strong>: account deletion, available in the app, genuinely removes your profile, photos, videos, comments and likes, from both our database and the media storage. One exception: a photo claimed by a print order in progress, whose file is kept until the order ships (see "How long do we keep your data?").</li>
+<li><strong>Access and portability</strong>: the “My data” section of the app lets you view and export your data in JSON format.</li>
+<li><strong>Erasure</strong>: deleting your account, available in the app, genuinely removes your profile, photos, videos, comments and likes, from both our database and media storage. The only exception: a photo needed for a print order in progress, whose file is kept until the order ships (see “How long do we keep your data?”). Your orders, which are accounting records, are kept but anonymised: name, address and link to your account are erased. A paid order not yet shipped stays intact until it is delivered, then is detached from your account as soon as it ships; its name and address are erased six months after the order, as for all orders.</li>
 <li>For any other request: <a href="mailto:piceventcontact@gmail.com">piceventcontact@gmail.com</a>.</li>
 </ul>
-<p>You may also lodge a complaint with your data protection authority — in France, the CNIL (<a href="https://www.cnil.fr">www.cnil.fr</a>).</p>
+<p>You can also lodge a complaint with the CNIL, the French data protection authority (<a href="https://www.cnil.fr">www.cnil.fr</a>).</p>
 
-<h2>8. Minimum age</h2>
-<p>In accordance with French law, PicEvent may only be used by people aged <strong>15 or over</strong>, or under 15 with the consent of a parent or legal guardian. This condition is accepted when creating the account.</p>
+<h2>7. Minimum age</h2>
+<p>In accordance with French law, PicEvent is reserved for people aged at least <strong>15</strong>, or under 15 with the permission of a holder of parental authority. This condition is accepted when the account is created.</p>
 
-<h2>9. Security</h2>
-<p>Communications with our servers are encrypted (HTTPS) and access to data is restricted by strict security rules. As no system is infallible, please only post content you are comfortable sharing with the members of your albums.</p>
+<h2>8. Security</h2>
+<p>Exchanges with our servers are encrypted (HTTPS) and access to data is limited by strict security rules. As no system is infallible, we invite you to post only content you are happy to share with the members of your albums.</p>
 
-<h2>10. Changes</h2>
-<p>This policy may be updated; the date at the top of the page indicates the latest version. You will be informed in the app of any significant change.</p>
-
-<h2>11. Reporting and moderation</h2>
-<p>Any guest can report a photo or comment they find inappropriate, directly from the app.</p>
-<p>The album organiser is then notified and can view the reported content, the reason and any details, in order to decide whether to remove it. <strong>They have no way of knowing who submitted the report</strong>: your identity is accessible only to our internal systems, and is used solely to address misuse of this feature.</p>
+<h2>9. Reporting and moderation</h2>
+<p>Any guest can report a photo or comment they consider inappropriate, directly from the app.</p>
+<p>The album's organiser is then notified and can see the content concerned, the reason and the details, to decide whether to delete it. <strong>However, they have no way of knowing who reported it</strong>: your identity is only accessible to our internal systems, and is used solely to deal with abuse of this feature.</p>
 <div class="box">This separation is deliberate. An organiser can remove a guest from their album; if they knew who had just reported one of their photos, they could retaliate.</div>
-<p>Reports are kept for the lifetime of the album, five months, and deleted along with it.</p>
 
-<h2>12. Hidden content</h2>
+<h2>10. Hidden content</h2>
 <p>You can hide a photo or comment for yourself alone, without reporting it. That list is <strong>stored only on your phone</strong> and is never sent to our servers: neither the organiser nor other guests can tell what you have chosen not to see. It is removed if you uninstall the app.</p>
+
+<h2>11. Changes</h2>
+<p>This policy may be updated; the date at the top of the page shows the latest version. In the event of a significant change, you will be informed in the app.</p>
 
 </div>
 </body>
